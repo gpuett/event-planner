@@ -14,11 +14,11 @@ A command line interface event planner that allows users to plan and calculate t
 |**The program will let the user choose from a list of drink options**| "Craft Beer" | "Craft Beer" |
 |**The program will let the user choose from a list of entertainment options**| "DJ" | "DJ" |
 |**The program will calculate the price of the event depending on chosen options**| "50, Pizza, Craft Beer, DJ"  | "$500" |
-|**The program will allow the user to enter a coupon code for a reduced price**| "FUNEVENT2018" | "$50 savings!" |
+|**The program will allow the user to enter a coupon code for a reduced price**| "FUNEVENT2018" | "%20 savings!" |
 
 ### Setup/Installation
 * Clone this repository
-* Open the project in IntelliJ
+* Open the project in IDEA ofyour choosing
 * Run App.java
 
 ## Technologies Used
