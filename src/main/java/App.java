@@ -15,18 +15,21 @@ public class App {
         wedding.setFoodOrdered("full catering");
         wedding.setDrinksOrdered("full bar");
         wedding.setEntertainment("dj");
+        wedding.setPackageCost(1200);
 
         Event birthday = new Event();
         birthday.setGuestCount(15);
         birthday.setFoodOrdered("pizza");
         birthday.setDrinksOrdered("craft beer");
         birthday.setEntertainment("none");
+        birthday.setPackageCost(80);
 
         Event reunion = new Event();
         reunion.setGuestCount(100);
         reunion.setFoodOrdered("full catering");
         reunion.setDrinksOrdered("full bar");
         reunion.setEntertainment("band");
+        reunion.setPackageCost(1750);
 
         ArrayList<Event> allPackages = new ArrayList<Event>();
 
@@ -37,26 +40,25 @@ public class App {
         boolean planning = true;
         while (planning){
             try {
-
+                NumberFormat formatter = NumberFormat.getCurrencyInstance();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
                 System.out.println("Welcome to the PDX Event Planner App!");
                 System.out.println("Would you like to view our package deals or plan your own event? Type 'packages' or 'plan' to navigate.");
                 String navigationChoice = bufferedReader.readLine().toLowerCase();
                 if (navigationChoice.equals("packages")){
+                    System.out.println("");
                     for (Event event : allPackages) {
                         System.out.println("-----------");
                         System.out.println(event.getFoodOrdered());
-                        event.setFoodCost();
                         System.out.println(event.getDrinksOrdered());
-                        event.setDrinkCost();
                         System.out.println(event.getEntertainment());
-                        event.setEntertainmentCost();
-                        event.setEventCost();
-                        System.out.println(event.getEventCost());
+                        double price = event.getPackageCost();
+                        System.out.println(formatter.format(price));
                     }
                 }
 
                 Event party = new Event();
+                System.out.println("");
                 System.out.println("We are currently offering a seasonal discount on our event hosting. Enter the coupon code FUNEVENT2018 when prompted to receive %20 off your order.");
                 System.out.println("Additionally, events with at least 150 attendees will receive a coupon for a free DJ");
                 System.out.println("How many guests do you expect to attend your event?");
@@ -126,7 +128,7 @@ public class App {
                 }
                 party.setEventCost();
                 double eventPrice = party.getEventCost();
-                NumberFormat formatter = NumberFormat.getCurrencyInstance();
+
                 System.out.println("Great! The cost of your event will be: " + formatter.format(eventPrice) + ".");
                 System.out.println("Please enter a promotional coupon code if available.");
                 String coupon = bufferedReader.readLine();

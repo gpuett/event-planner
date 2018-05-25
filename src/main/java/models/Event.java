@@ -100,5 +100,13 @@ public class Event {
         return eventCost;
     }
 
+    public void setPackageCost(int price){
+        this.eventCost = price;
+    }
+
+    public int getPackageCost() {
+        return eventCost;
+    }
+
 
 }
