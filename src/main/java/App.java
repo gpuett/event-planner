@@ -3,19 +3,62 @@ import models.Event;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.text.NumberFormat;
 
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Welcome to the PDX Event Planner App!");
-        System.out.println("We are currently offering a seasonal discount on our event hosting. Enter the coupon code FUNEVENT2018 when prompted to receive %20 off your order.");
-        System.out.println("Additionally, events with at least 150 attendees will receive a coupon for a free DJ");
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        Event wedding = new Event();
+        wedding.setGuestCount(75);
+        wedding.setFoodOrdered("full catering");
+        wedding.setDrinksOrdered("full bar");
+        wedding.setEntertainment("dj");
+
+        Event birthday = new Event();
+        birthday.setGuestCount(15);
+        birthday.setFoodOrdered("pizza");
+        birthday.setDrinksOrdered("craft beer");
+        birthday.setEntertainment("none");
+
+        Event reunion = new Event();
+        reunion.setGuestCount(100);
+        reunion.setFoodOrdered("full catering");
+        reunion.setDrinksOrdered("full bar");
+        reunion.setEntertainment("band");
+
+        ArrayList<Event> allPackages = new ArrayList<Event>();
+
+        allPackages.add(wedding);
+        allPackages.add(birthday);
+        allPackages.add(reunion);
+
         boolean planning = true;
         while (planning){
             try {
+
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+                System.out.println("Welcome to the PDX Event Planner App!");
+                System.out.println("Would you like to view our package deals or plan your own event? Type 'packages' or 'plan' to navigate.");
+                String navigationChoice = bufferedReader.readLine().toLowerCase();
+                if (navigationChoice.equals("packages")){
+                    for (Event event : allPackages) {
+                        System.out.println("-----------");
+                        System.out.println(event.getFoodOrdered());
+                        event.setFoodCost();
+                        System.out.println(event.getDrinksOrdered());
+                        event.setDrinkCost();
+                        System.out.println(event.getEntertainment());
+                        event.setEntertainmentCost();
+                        event.setEventCost();
+                        System.out.println(event.getEventCost());
+                    }
+                }
+
                 Event party = new Event();
+                System.out.println("We are currently offering a seasonal discount on our event hosting. Enter the coupon code FUNEVENT2018 when prompted to receive %20 off your order.");
+                System.out.println("Additionally, events with at least 150 attendees will receive a coupon for a free DJ");
                 System.out.println("How many guests do you expect to attend your event?");
                 Integer guests = Integer.parseInt(bufferedReader.readLine());
                 party.setGuestCount(guests);
