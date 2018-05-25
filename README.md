@@ -13,6 +13,7 @@ A command line interface event planner that allows users to plan and calculate t
 |**The program will let the user choose from a list of food options**| "Pizza" | "Pizza" |
 |**The program will let the user choose from a list of drink options**| "Craft Beer" | "Craft Beer" |
 |**The program will let the user choose from a list of entertainment options**| "DJ" | "DJ" |
+|**The program will provide special packages with reduced pricing**| "wedding" | "$1,200" |
 |**The program will calculate the price of the event depending on chosen options**| "50, Pizza, Craft Beer, DJ"  | "$500" |
 |**The program will allow the user to enter a coupon code for a reduced price**| "FUNEVENT2018" | "%20 savings!" |
 
@@ -20,6 +21,9 @@ A command line interface event planner that allows users to plan and calculate t
 * Clone this repository
 * Open the project in IDEA of your choosing
 * Run App.java
+
+### Known Bugs
+No known bugs at this time.
 
 ## Technologies Used
 * Java
