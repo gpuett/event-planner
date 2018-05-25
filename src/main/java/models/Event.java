@@ -14,6 +14,13 @@ public class Event {
         return guestCount;
     }
 
+    public void setFoodOrdered(String food){
+        this.foodOrdered = food;
+    }
+
+    public String getFoodOrdered() {
+        return foodOrdered;
+    }
 
 
 }

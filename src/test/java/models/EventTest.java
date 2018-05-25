@@ -19,4 +19,13 @@ public class EventTest {
         assertEquals(50, testEvent.getGuestCount());
 
     }
+
+    @Test
+    public void getFoodOrdered_correctlyGetsFoodOrder_String() {
+        Event testEvent = new Event();
+        testEvent.setFoodOrdered("Pizza");
+        assertEquals("Pizza", testEvent.getFoodOrdered());
+    }
+
+
 }
