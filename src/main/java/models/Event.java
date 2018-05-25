@@ -30,5 +30,13 @@ public class Event {
         return drinksOrdered;
     }
 
+    public void setEntertainment(String act){
+        this.entertainment = act;
+    }
+
+    public String getEntertainment() {
+        return entertainment;
+    }
+
 
 }

@@ -33,4 +33,11 @@ public class EventTest {
         testEvent.setDrinksOrdered("Craft Beer");
         assertEquals("Craft Beer", testEvent.getDrinksOrdered());
     }
+
+    @Test
+    public void getEntertainment_correctlyGetsEntertainment_String() {
+        Event testEvent = new Event();
+        testEvent.setEntertainment("DJ");
+        assertEquals("DJ", testEvent.getEntertainment());
+    }
 }
