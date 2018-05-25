@@ -67,7 +67,7 @@ public class EventTest {
         assertEquals(100, testEvent.getEntertainmentCost());
     }
 
-        @Test
+    @Test
     public void calculateEventCost_calculatesCostofEvent_Integer() {
         Event testEvent = new Event();
         testEvent.setGuestCount(50);

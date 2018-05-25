@@ -3,11 +3,13 @@ import models.Event;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.NumberFormat;
+
 
 public class App {
     public static void main(String[] args) {
         System.out.println("Welcome to the PDX Event Planner App!");
-        System.out.println("We are currently offering a seasonal discount on our event hosting. Enter the coupon code FUNEVENT2018 when prompted to receive $50 off your order.");
+        System.out.println("We are currently offering a seasonal discount on our event hosting. Enter the coupon code FUNEVENT2018 when prompted to receive %20 off your order.");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         boolean planning = true;
         while (planning){
@@ -83,13 +85,15 @@ public class App {
                 System.out.println("Please enter a promotional coupon code if available.");
                 String coupon = bufferedReader.readLine();
                 if (coupon.equals("FUNEVENT2018")){
-                    System.out.println("Code accepted! $50 has been subtracted from your bill.");
-                    System.out.println("The cost of your event will be: $" + (party.getEventCost()-50) + ".");
+                    System.out.println("Code accepted! %20 has been subtracted from your bill.");
+                    double discount = (party.getEventCost()*80)/100;
+                    NumberFormat formatter = NumberFormat.getCurrencyInstance();
+                    System.out.println("The cost of your event will be: $" + formatter.format(discount) + ".");
                     System.out.println("We hope you enjoy your party! Goodbye!");
                     planning = false;
                 } else {
                     System.out.println("No coupon found");
-                    System.out.println("The cost of your event will be: $" + party.getEventCost() + ".");
+                    System.out.println("The cost of your event will be: " + party.getEventCost() + ".");
                     System.out.println("We hope you enjoy your party! Goodbye!");
                     planning = false;
                 }
