@@ -22,5 +22,13 @@ public class Event {
         return foodOrdered;
     }
 
+    public void setDrinksOrdered(String drink){
+        this.drinksOrdered = drink;
+    }
+
+    public String getDrinksOrdered() {
+        return drinksOrdered;
+    }
+
 
 }

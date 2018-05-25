@@ -27,5 +27,10 @@ public class EventTest {
         assertEquals("Pizza", testEvent.getFoodOrdered());
     }
 
-
+    @Test
+    public void getDrinksOrdered_correctlyGetsDrinkOrder_String() {
+        Event testEvent = new Event();
+        testEvent.setDrinksOrdered("Craft Beer");
+        assertEquals("Craft Beer", testEvent.getDrinksOrdered());
+    }
 }
