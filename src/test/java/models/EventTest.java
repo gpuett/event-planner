@@ -68,7 +68,7 @@ public class EventTest {
     }
 
     @Test
-    public void calculateEventCost_calculatesCostofEvent_Integer() {
+    public void calculateEventCost_calculatesCostofEvent_Double() {
         Event testEvent = new Event();
         testEvent.setGuestCount(50);
         testEvent.setFoodOrdered("pizza");

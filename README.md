@@ -18,7 +18,7 @@ A command line interface event planner that allows users to plan and calculate t
 
 ### Setup/Installation
 * Clone this repository
-* Open the project in IDEA ofyour choosing
+* Open the project in IDEA of your choosing
 * Run App.java
 
 ## Technologies Used
