@@ -40,4 +40,23 @@ public class EventTest {
         testEvent.setEntertainment("DJ");
         assertEquals("DJ", testEvent.getEntertainment());
     }
+
+    @Test
+    public void getFoodCost_calculatesCostOfFood_Integer() {
+        Event testEvent = new Event();
+        testEvent.setGuestCount(50);
+        testEvent.setFoodOrdered("Pizza");
+        testEvent.setFoodCost();
+        assertEquals(150, testEvent.getFoodCost());
+    }
+
+    //    @Test
+//    public void calculateEventCost_calculatesCostofEvent_Integer() {
+//        Event testEvent = new Event();
+//        testEvent.setGuestCount(50);
+//        testEvent.setFoodOrdered("Pizza");
+//        testEvent.setDrinksOrdered("Craft Beer");
+//        testEvent.setEntertainment("DJ");
+//        assertEquals(500, testEvent.calculateCost());
+//    }
 }

@@ -5,6 +5,7 @@ public class Event {
     private String foodOrdered;
     private String drinksOrdered;
     private String entertainment;
+    private int foodCost;
 
     public void setGuestCount(int count) {
         this.guestCount = count;
@@ -37,6 +38,24 @@ public class Event {
     public String getEntertainment() {
         return entertainment;
     }
+
+    public void setFoodCost(){
+        if (this.foodOrdered.equals("Pizza")){
+            this.foodCost = this.guestCount * 3;
+        } else if (this.foodOrdered.equals("Burgers")){
+            this.foodCost = this.guestCount * 5;
+        } else if (this.foodOrdered.equals("Full Catering")){
+            this.foodCost = this.guestCount * 10;
+        }
+    }
+
+    public int getFoodCost() {
+        return foodCost;
+    }
+
+//    public int calculateEventCost() {
+//        return 0;
+//    }
 
 
 }
