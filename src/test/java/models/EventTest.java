@@ -45,7 +45,7 @@ public class EventTest {
     public void getFoodCost_calculatesCostOfFood_Integer() {
         Event testEvent = new Event();
         testEvent.setGuestCount(50);
-        testEvent.setFoodOrdered("Pizza");
+        testEvent.setFoodOrdered("pizza");
         testEvent.setFoodCost();
         assertEquals(150, testEvent.getFoodCost());
     }
@@ -54,7 +54,7 @@ public class EventTest {
     public void getDrinkCost_calculatesCostOfDrinks_Integer() {
         Event testEvent = new Event();
         testEvent.setGuestCount(50);
-        testEvent.setDrinksOrdered("Craft Beer");
+        testEvent.setDrinksOrdered("craft beer");
         testEvent.setDrinkCost();
         assertEquals(200, testEvent.getDrinkCost());
     }
@@ -62,7 +62,7 @@ public class EventTest {
     @Test
     public void getEntertainmentCost_calculatesCostOfEntertainment_Integer() {
         Event testEvent = new Event();
-        testEvent.setEntertainment("DJ");
+        testEvent.setEntertainment("dj");
         testEvent.setEntertainmentCost();
         assertEquals(100, testEvent.getEntertainmentCost());
     }
@@ -71,11 +71,11 @@ public class EventTest {
     public void calculateEventCost_calculatesCostofEvent_Integer() {
         Event testEvent = new Event();
         testEvent.setGuestCount(50);
-        testEvent.setFoodOrdered("Pizza");
+        testEvent.setFoodOrdered("pizza");
         testEvent.setFoodCost();
-        testEvent.setDrinksOrdered("Craft Beer");
+        testEvent.setDrinksOrdered("craft beer");
         testEvent.setDrinkCost();
-        testEvent.setEntertainment("DJ");
+        testEvent.setEntertainment("dj");
         testEvent.setEntertainmentCost();
         testEvent.setEventCost();
         assertEquals(450, testEvent.getEventCost());

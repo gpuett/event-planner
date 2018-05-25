@@ -43,11 +43,11 @@ public class Event {
     }
 
     public void setFoodCost(){
-        if (this.foodOrdered.equals("Pizza")){
+        if (this.foodOrdered.equals("pizza")){
             this.foodCost = this.guestCount * 3;
-        } else if (this.foodOrdered.equals("Burgers")){
+        } else if (this.foodOrdered.equals("burgers")){
             this.foodCost = this.guestCount * 5;
-        } else if (this.foodOrdered.equals("Full Catering")){
+        } else if (this.foodOrdered.equals("full catering")){
             this.foodCost = this.guestCount * 10;
         }
     }
@@ -57,11 +57,11 @@ public class Event {
     }
 
     public void setDrinkCost(){
-        if (this.drinksOrdered.equals("Soda")){
+        if (this.drinksOrdered.equals("soda")){
             this.drinkCost = this.guestCount;
-        } else if (this.drinksOrdered.equals("Craft Beer")){
+        } else if (this.drinksOrdered.equals("craft beer")){
             this.drinkCost = this.guestCount * 4;
-        } else if (this.drinksOrdered.equals("Full Bar")){
+        } else if (this.drinksOrdered.equals("full bar")){
             this.drinkCost = this.guestCount * 8;
         }
     }
@@ -71,9 +71,9 @@ public class Event {
     }
 
     public void setEntertainmentCost(){
-        if (this.entertainment.equals("DJ")){
+        if (this.entertainment.equals("dj")){
             this.entertainmentCost = 100;
-        } else if (this.entertainment.equals("Band")){
+        } else if (this.entertainment.equals("band")){
             this.entertainmentCost = 200;
         }
     }
