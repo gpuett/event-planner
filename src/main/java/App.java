@@ -81,19 +81,21 @@ public class App {
                     }
                 }
                 party.setEventCost();
-                System.out.println("Great!");
+                double eventPrice = party.getEventCost();
+                NumberFormat formatter = NumberFormat.getCurrencyInstance();
+                System.out.println("Great! The cost of your event will be: " + formatter.format(eventPrice) + ".");
                 System.out.println("Please enter a promotional coupon code if available.");
                 String coupon = bufferedReader.readLine();
                 if (coupon.equals("FUNEVENT2018")){
                     System.out.println("Code accepted! %20 has been subtracted from your bill.");
                     double discount = (party.getEventCost()*80)/100;
-                    NumberFormat formatter = NumberFormat.getCurrencyInstance();
-                    System.out.println("The cost of your event will be: " + formatter.format(discount) + ".");
+
+                    System.out.println("The updated cost of your event will be: " + formatter.format(discount) + ".");
                     System.out.println("We hope you enjoy your party! Goodbye!");
                     planning = false;
                 } else {
                     System.out.println("No coupon found");
-                    System.out.println("The cost of your event will be: $" + party.getEventCost() + ".");
+                    System.out.println("The cost of your event will be: " + formatter.format(eventPrice) + ".");
                     System.out.println("We hope you enjoy your party! Goodbye!");
                     planning = false;
                 }
