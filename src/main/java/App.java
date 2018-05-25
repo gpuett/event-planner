@@ -28,14 +28,14 @@ public class App {
                         System.out.println("I didn't recognize that entry. Please choose one of the above options.");
                     }
                 }
-                System.out.println("Yum! What about drinks? Which would you like of the following? Soda, Craft Beer, or Full Bar?");
-                boolean choosingdrinks = true;
-                while (choosingdrinks){
+                System.out.println("Yum! What about drinks? Which would you like of the following: Soda, Craft Beer, or Full Bar?");
+                boolean choosingDrinks = true;
+                while (choosingDrinks){
                     String drink = bufferedReader.readLine().toLowerCase();
                     if (drink.equals("soda") || drink.equals("craft beer") || drink.equals("full bar")){
                         party.setDrinksOrdered(drink);
                         party.setDrinkCost();
-                        choosingdrinks = false;
+                        choosingDrinks = false;
                     } else {
                         System.out.println("I didn't recognize that entry. Please choose one of the above options.");
                     }
@@ -83,7 +83,7 @@ public class App {
                 System.out.println("Please enter a promotional coupon code if available.");
                 String coupon = bufferedReader.readLine();
                 if (coupon.equals("FUNEVENT2018")){
-                    System.out.println("Code accepted!");
+                    System.out.println("Code accepted! $50 has been subtracted from your bill.");
                     System.out.println("The cost of your event will be: $" + (party.getEventCost()-50) + ".");
                     System.out.println("We hope you enjoy your party! Goodbye!");
                     planning = false;
@@ -93,8 +93,6 @@ public class App {
                     System.out.println("We hope you enjoy your party! Goodbye!");
                     planning = false;
                 }
-
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
