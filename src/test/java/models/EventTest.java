@@ -50,6 +50,15 @@ public class EventTest {
         assertEquals(150, testEvent.getFoodCost());
     }
 
+    @Test
+    public void getDrinkCost_calculatesCostOfDrinks_Integer() {
+        Event testEvent = new Event();
+        testEvent.setGuestCount(50);
+        testEvent.setDrinksOrdered("Craft Beer");
+        testEvent.setDrinkCost();
+        assertEquals(200, testEvent.getDrinkCost());
+    }
+
     //    @Test
 //    public void calculateEventCost_calculatesCostofEvent_Integer() {
 //        Event testEvent = new Event();
