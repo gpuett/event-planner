@@ -10,6 +10,7 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Welcome to the PDX Event Planner App!");
         System.out.println("We are currently offering a seasonal discount on our event hosting. Enter the coupon code FUNEVENT2018 when prompted to receive %20 off your order.");
+        System.out.println("Additionally, events with at least 150 attendees will receive a coupon for a free DJ");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         boolean planning = true;
         while (planning){
