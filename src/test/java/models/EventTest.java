@@ -68,7 +68,7 @@ public class EventTest {
     }
 
     @Test
-    public void calculateEventCost_calculatesCostofEvent_Double() {
+    public void calculateEventCost_calculatesCostofEvent_Integer() {
         Event testEvent = new Event();
         testEvent.setGuestCount(50);
         testEvent.setFoodOrdered("pizza");
@@ -79,5 +79,12 @@ public class EventTest {
         testEvent.setEntertainmentCost();
         testEvent.setEventCost();
         assertEquals(450, testEvent.getEventCost());
+    }
+
+    @Test
+    public void getPackageCost_setAndGetSpecialPackageCost_Integer() {
+        Event testEvent = new Event();
+        testEvent.setPackageCost(1000);
+        assertEquals(1000, testEvent.getPackageCost());
     }
 }

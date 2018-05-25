@@ -10,6 +10,14 @@ public class Event {
     private int entertainmentCost;
     private int eventCost;
 
+//    public Event(int guestCount, String foodOrdered, String drinksOrdered, String entertainment, int eventCost){
+//        this.guestCount = guestCount;
+//        this.foodOrdered = foodOrdered;
+//        this.drinksOrdered = drinksOrdered;
+//        this.entertainment = entertainment;
+//        this.eventCost = eventCost;
+//    }
+
     public void setGuestCount(int count) {
         this.guestCount = count;
     }
@@ -89,6 +97,14 @@ public class Event {
     }
 
     public int getEventCost() {
+        return eventCost;
+    }
+
+    public void setPackageCost(int price){
+        this.eventCost = price;
+    }
+
+    public int getPackageCost() {
         return eventCost;
     }
 
