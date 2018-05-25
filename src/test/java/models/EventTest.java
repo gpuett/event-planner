@@ -67,16 +67,17 @@ public class EventTest {
         assertEquals(100, testEvent.getEntertainmentCost());
     }
 
-//        @Test
-//    public void calculateEventCost_calculatesCostofEvent_Integer() {
-//        Event testEvent = new Event();
-//        testEvent.setGuestCount(50);
-//        testEvent.setFoodOrdered("Pizza");
-//        testEvent.setFoodCost();
-//        testEvent.setDrinksOrdered("Craft Beer");
-//        testEvent.setDrinkCost();
-//        testEvent.setEntertainment("DJ");
-//        testEvent.setEntertainmentCost();
-//        assertEquals(450, testEvent.getEventCost());
-//    }
+        @Test
+    public void calculateEventCost_calculatesCostofEvent_Integer() {
+        Event testEvent = new Event();
+        testEvent.setGuestCount(50);
+        testEvent.setFoodOrdered("Pizza");
+        testEvent.setFoodCost();
+        testEvent.setDrinksOrdered("Craft Beer");
+        testEvent.setDrinkCost();
+        testEvent.setEntertainment("DJ");
+        testEvent.setEntertainmentCost();
+        testEvent.setEventCost();
+        assertEquals(450, testEvent.getEventCost());
+    }
 }

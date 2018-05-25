@@ -8,7 +8,7 @@ public class Event {
     private int foodCost;
     private int drinkCost;
     private int entertainmentCost;
-    private int EventCost;
+    private int eventCost;
 
     public void setGuestCount(int count) {
         this.guestCount = count;
@@ -82,7 +82,12 @@ public class Event {
         return entertainmentCost;
     }
 
+    public void setEventCost() {
+        this.eventCost = this.foodCost + this.drinkCost + this.entertainmentCost;
+    }
 
-
+    public int getEventCost() {
+        return eventCost;
+    }
 
 }
