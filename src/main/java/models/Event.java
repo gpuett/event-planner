@@ -75,6 +75,8 @@ public class Event {
             this.entertainmentCost = 100;
         } else if (this.entertainment.equals("band")){
             this.entertainmentCost = 200;
+        } else if (this.entertainment.equals("none")){
+            this.entertainmentCost = 0;
         }
     }
 

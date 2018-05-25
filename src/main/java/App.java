@@ -23,7 +23,7 @@ public class App {
                 String drink = bufferedReader.readLine().toLowerCase();
                 party.setDrinksOrdered(drink);
                 party.setDrinkCost();
-                System.out.println("Sounds good! What type of musical entertainment would you like? DJ or Band?");
+                System.out.println("Sounds good! What type of musical entertainment would you like? DJ, Band, or none?");
                 String entertainer = bufferedReader.readLine().toLowerCase();
                 party.setEntertainment(entertainer);
                 party.setEntertainmentCost();
