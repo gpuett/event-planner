@@ -39,20 +39,49 @@ public class App {
                         System.out.println("I didn't recognize that entry. Please choose one of the above options.");
                     }
                 }
-                System.out.println("Sounds good! What type of musical entertainment would you like? DJ, Band, or none?");
+
                 boolean choosingEntertainment = true;
                 while (choosingEntertainment){
-                    String entertainer = bufferedReader.readLine().toLowerCase();
-                    if (entertainer.equals("dj") || entertainer.equals("band") || entertainer.equals("none")){
-                        party.setEntertainment(entertainer);
-                        party.setEntertainmentCost();
-                        choosingEntertainment = false;
+                    if (guests >= 150) {
+                        System.out.println("You have automatically qualified for a free DJ coupon. Would you like to take advantage of this one-time offer? Y/N?");
+                        boolean decidingOnOffer = true;
+                        while (decidingOnOffer) {
+                            String djOffer = bufferedReader.readLine().toLowerCase();
+                            if (djOffer.equals("y")) {
+                                party.setEntertainment("none");
+                                party.setEntertainmentCost();
+                                decidingOnOffer = false;
+                                choosingEntertainment = false;
+                            } else {
+                                System.out.println("No Problem! What type of musical entertainment would you like? DJ, Band, or none?");
+                                String entertainer = bufferedReader.readLine().toLowerCase();
+                                if (entertainer.equals("dj") || entertainer.equals("band") || entertainer.equals("none")) {
+                                    party.setEntertainment(entertainer);
+                                    party.setEntertainmentCost();
+                                    choosingEntertainment = false;
+                                    decidingOnOffer = false;
+                                } else {
+                                    System.out.println("I didn't recognize that entry. Please try again.");
+                                    decidingOnOffer = false;
+                                }
+
+                            }
+                        }
                     } else {
-                        System.out.println("I didn't recognize that entry. Please choose one of the above options.");
+                        System.out.println("Sounds good! What type of musical entertainment would you like? DJ, Band, or none?");
+                        String entertainer = bufferedReader.readLine().toLowerCase();
+                        if (entertainer.equals("dj") || entertainer.equals("band") || entertainer.equals("none")) {
+                            party.setEntertainment(entertainer);
+                            party.setEntertainmentCost();
+                            choosingEntertainment = false;
+                        } else {
+                            System.out.println("I didn't recognize that entry. Please choose one of the above options.");
+                        }
                     }
                 }
                 party.setEventCost();
-                System.out.println("That will be fun!");
+                System.out.println("Great!");
+
                 System.out.println("The cost of your event will be: $" + party.getEventCost() + ".");
                 System.out.println("We hope you enjoy your party! Goodbye!");
                 planning = false;
